@@ -1,17 +1,18 @@
-// Body Typography
+// _typography.scss
+
+// Base Typography Styles
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
   }
   
-  // Heading Typography
+  // Heading Styles
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
-    margin-bottom: 0.5em;
-    line-height: 1.2;
+    margin-bottom: 10px;
   }
   
   h1 {
@@ -38,19 +39,37 @@ body {
     font-size: 1em;
   }
   
-  // Paragraph Typography
+  // Paragraph Styles
   p {
-    margin-bottom: 1em;
+    margin-bottom: 15px;
   }
   
-  // Links Typography
+  // Anchor (Link) Styles
   a {
     color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease;
   
     &:hover {
       color: #0056b3;
     }
   }
+  
+  // Other Typography Elements
+  strong {
+    font-weight: bold;
+  }
+  
+  em {
+    font-style: italic;
+  }
+  
+  // Blockquote Styles
+  blockquote {
+    margin: 0 0 15px;
+    padding: 10px 20px;
+    border-left: 4px solid #ccc;
+  }
+
+  
   

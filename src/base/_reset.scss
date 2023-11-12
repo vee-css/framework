@@ -1,4 +1,6 @@
-// Reset styles
+// _reset.scss
+
+// Resetting default browser styles
 html,
 body,
 div,
@@ -17,6 +19,7 @@ blockquote,
 pre,
 a,
 abbr,
+acronym,
 address,
 big,
 cite,
@@ -34,7 +37,6 @@ small,
 strike,
 strong,
 sub,
-
 sup,
 tt,
 var,
@@ -64,13 +66,17 @@ article,
 aside,
 canvas,
 details,
-figcaption,
+embed,
 figure,
+figcaption,
 footer,
 header,
 hgroup,
+main,
 menu,
 nav,
+output,
+ruby,
 section,
 summary,
 time,
@@ -85,7 +91,7 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+// Resetting specific styles for certain tags
 article,
 aside,
 details,
@@ -94,35 +100,117 @@ figure,
 footer,
 header,
 hgroup,
+main,
 menu,
 nav,
 section {
   display: block;
 }
 
-body {
-  line-height: 1;
+// HTML5 font element with default font style
+mark {
+  background-color: transparent;
+  color: inherit;
 }
 
-ol,
-ul {
+// Resetting styles for form elements
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+// Resetting styles for form elements in Safari / Chrome
+button,
+input {
+  overflow: visible;
+}
+
+// Resetting styles for form elements in IE 11
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+// Resetting styles for list elements
+ul,
+ol {
   list-style: none;
 }
 
-blockquote,
-q {
+// Resetting styles for table elements
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Resetting styles for blockquote elements
+blockquote {
   quotes: none;
 }
 
+// Resetting styles for blockquote elements after quote passage
 blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:after {
   content: '';
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+// Resetting styles for q and cite elements
+q:before,
+q:after,
+cite:before,
+cite:after {
+  content: '';
+  content: none;
+}
+
+// Resetting styles for audio and video elements
+audio,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+// Resetting styles for audio and video elements in IE 11
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+// Resetting styles for details elements
+details {
+  display: block;
+}
+
+// Resetting styles for mark and revisions elements
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+// Resetting styles for s (strikethrough) text element
+s {
+  text-decoration: line-through;
+}
+
+// Resetting styles for u (underline) text element
+u {
+  text-decoration: underline;
+}
+
+// Resetting styles for a (anchor/link) text element
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,207 +1,221 @@
-//
-// Base styles
-//
+// Color Variables
+$white: #ffffff;
+$black: #000000;
 
-.btn {
-  // scss-docs-start btn-css-vars
-  --#{$prefix}btn-padding-x: #{$btn-padding-x};
-  --#{$prefix}btn-padding-y: #{$btn-padding-y};
-  --#{$prefix}btn-font-family: #{$btn-font-family};
-  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
-  --#{$prefix}btn-font-weight: #{$btn-font-weight};
-  --#{$prefix}btn-line-height: #{$btn-line-height};
-  --#{$prefix}btn-color: #{$btn-color};
-  --#{$prefix}btn-bg: transparent;
-  --#{$prefix}btn-border-width: #{$btn-border-width};
-  --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: #{$btn-border-radius};
-  --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
-  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
-  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), .5);
-  // scss-docs-end btn-css-vars
+// Gray Shades
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
 
+// Red Shades
+$red-100: #ffebee;
+$red-200: #ffcdd2;
+$red-300: #ef9a9a;
+$red-400: #e57373;
+$red-500: #f44336;
+$red-600: #e53935;
+$red-700: #d32f2f;
+$red-800: #c62828;
+$red-900: #b71c1c;
+
+// Yellow Shades
+$yellow-100: #fff9c4;
+$yellow-200: #fff59d;
+$yellow-300: #fff176;
+$yellow-400: #ffee58;
+$yellow-500: #ffeb3b;
+$yellow-600: #fdd835;
+$yellow-700: #fbc02d;
+$yellow-800: #f9a825;
+$yellow-900: #f57f17;
+
+// Green Shades
+$green-100: #e8f5e9;
+$green-200: #c8e6c9;
+$green-300: #a5d6a7;
+$green-400: #81c784;
+$green-500: #4caf50;
+$green-600: #43a047;
+$green-700: #388e3c;
+$green-800: #2e7d32;
+$green-900: #1b5e20;
+
+// Blue Shades
+$blue-100: #e3f2fd;
+$blue-200: #bbdefb;
+$blue-300: #90caf9;
+$blue-400: #64b5f6;
+$blue-500: #2196f3;
+$blue-600: #1e88e5;
+$blue-700: #1976d2;
+$blue-800: #1565c0;
+$blue-900: #0d47a1;
+
+// Indigo Shades
+$indigo-100: #e8eaf6;
+$indigo-200: #c5cae9;
+$indigo-300: #9fa8da;
+$indigo-400: #7986cb;
+$indigo-500: #3f51b5;
+$indigo-600: #3949ab;
+$indigo-700: #303f9f;
+$indigo-800: #283593;
+$indigo-900: #1a237e;
+
+// Purple Shades
+$purple-100: #f3e5f5;
+$purple-200: #e1bee7;
+$purple-300: #ce93d8;
+$purple-400: #ba68c8;
+$purple-500: #9c27b0;
+$purple-600: #8e24aa;
+$purple-700: #7b1fa2;
+$purple-800: #6a1b9a;
+$purple-900: #4a148c;
+
+// Pink Shades
+$pink-100: #fce4ec;
+$pink-200: #f8bbd0;
+$pink-300: #f48fb1;
+$pink-400: #f06292;
+$pink-500: #e91e63;
+$pink-600: #d81b60;
+$pink-700: #c2185b;
+$pink-800: #ad1457;
+$pink-900: #880e4f;
+
+// Buttons Styles
+.button {
   display: inline-block;
-  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
-  font-family: var(--#{$prefix}btn-font-family);
-  @include font-size(var(--#{$prefix}btn-font-size));
-  font-weight: var(--#{$prefix}btn-font-weight);
-  line-height: var(--#{$prefix}btn-line-height);
-  color: var(--#{$prefix}btn-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
-  text-decoration: if($link-decoration == none, null, none);
-  white-space: $btn-white-space;
-  vertical-align: middle;
-  cursor: if($enable-button-pointers, pointer, null);
-  user-select: none;
-  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  @include border-radius(var(--#{$prefix}btn-border-radius));
-  @include gradient-bg(var(--#{$prefix}btn-bg));
-  @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  @include transition($btn-transition);
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
   &:hover {
-    color: var(--#{$prefix}btn-hover-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
-    background-color: var(--#{$prefix}btn-hover-bg);
-    border-color: var(--#{$prefix}btn-hover-border-color);
-  }
-
-  .btn-check + &:hover {
-    // override for the checkbox/radio buttons
-    color: var(--#{$prefix}btn-color);
-    background-color: var(--#{$prefix}btn-bg);
-    border-color: var(--#{$prefix}btn-border-color);
-  }
-
-  &:focus-visible {
-    color: var(--#{$prefix}btn-hover-color);
-    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
-  }
-
-  .btn-check:focus-visible + & {
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
-  }
-
-  .btn-check:checked + &,
-  :not(.btn-check) + &:active,
-  &:first-child:active,
-  &.active,
-  &.show {
-    color: var(--#{$prefix}btn-active-color);
-    background-color: var(--#{$prefix}btn-active-bg);
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: var(--#{$prefix}btn-active-border-color);
-    @include box-shadow(var(--#{$prefix}btn-active-shadow));
-
-    &:focus-visible {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
-      } @else {
-        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-      }
-    }
-  }
-
-  &:disabled,
-  &.disabled,
-  fieldset:disabled & {
-    color: var(--#{$prefix}btn-disabled-color);
-    pointer-events: none;
-    background-color: var(--#{$prefix}btn-disabled-bg);
-    background-image: if($enable-gradients, none, null);
-    border-color: var(--#{$prefix}btn-disabled-border-color);
-    opacity: var(--#{$prefix}btn-disabled-opacity);
-    @include box-shadow(none);
+    border-color: $blue-500; // Par exemple, changez cette couleur selon vos besoins
   }
 }
 
-
-//
-// Alternate buttons
-//
-
-// scss-docs-start btn-variant-loops
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @if $color == "light" {
-      @include button-variant(
-        $value,
-        $value,
-        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
-        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
-        $active-background: shade-color($value, $btn-active-bg-shade-amount),
-        $active-border: shade-color($value, $btn-active-border-shade-amount)
-      );
-    } @else if $color == "dark" {
-      @include button-variant(
-        $value,
-        $value,
-        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
-        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
-        $active-background: tint-color($value, $btn-active-bg-tint-amount),
-        $active-border: tint-color($value, $btn-active-border-tint-amount)
-      );
-    } @else {
-      @include button-variant($value, $value);
-    }
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value);
-  }
-}
-// scss-docs-end btn-variant-loops
-
-
-//
-// Link buttons
-//
-
-// Make a button look and behave like a link
-.btn-link {
-  --#{$prefix}btn-font-weight: #{$font-weight-normal};
-  --#{$prefix}btn-color: #{$btn-link-color};
-  --#{$prefix}btn-bg: transparent;
-  --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-active-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-active-border-color: transparent;
-  --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
-  --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
-  --#{$prefix}btn-focus-shadow-rgb: #{$btn-link-focus-shadow-rgb};
-
-  text-decoration: $link-decoration;
-  @if $enable-gradients {
-    background-image: none;
-  }
-
-  &:hover,
-  &:focus-visible {
-    text-decoration: $link-hover-decoration;
-  }
-
-  &:focus-visible {
-    color: var(--#{$prefix}btn-color);
-  }
+// Primary Button
+.button-primary {
+  background-color: $blue-500;
+  color: $white;
 
   &:hover {
-    color: var(--#{$prefix}btn-hover-color);
+    background-color: darken($blue-500, 10%);
   }
+}
 
-  // No need for an active state here
+// Secondary Button
+.button-secondary {
+  background-color: $gray-300;
+  color: $black;
+
+  &:hover {
+    background-color: lighten($gray-300, 10%);
+  }
+}
+
+// Danger Button
+.button-danger {
+  background-color: $red-500;
+  color: $white;
+
+  &:hover {
+    background-color: darken($red-500, 10%);
+  }
+}
+
+// Success Button
+.button-success {
+  background-color: $green-500;
+  color: $white;
+  &:hover {
+    background-color: darken($green-500, 10%);
+  }
+}
+
+// Warning Button
+.button-warning {
+  background-color: $yellow-500;
+  color: $white;
+  &:hover {
+    background-color: darken($yellow-500, 10%);
+  }
+}
+
+// Info Button
+.button-info {
+  background-color: $blue-500;
+  color: $white;
+  &:hover {
+    background-color: darken($blue-500, 10%);
+  }
 }
 
 
-//
-// Button Sizes
-//
 
-.btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+// Black Button
+.button-black {
+  background-color: $black;
+  color: $white;
+  &:hover {
+    background-color: darken($black, 10%);
+  }
 }
 
-.btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+// White Button
+.button-white {
+  background-color: $white;
+  color: $black;
+  &:hover {
+    background-color: darken($white, 10%);
+  }
+}
+
+// Grey Button
+.button-grey {
+  background-color: $gray-500;
+  color: $white;
+  &:hover {
+    background-color: darken($gray-500, 10%);
+  }
+}
+
+// Orange Button
+.button-orange {
+  background-color: $orange-500;
+  color: $white;
+  &:hover {
+    background-color: darken($orange-500, 10%);
+  }
+}
+
+// Gray Button
+.button-gray {
+  background-color: $gray-500;
+  color: $white;
+  &:hover {
+    background-color: darken($gray-500, 10%);
+  }
+}
+
+// Blue Button
+.button-blue {
+  background-color: $blue-500;
+  color: $white;
+  &:hover {
+    background-color: darken($blue-500, 10%);
+  }
 }
