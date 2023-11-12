@@ -1,0 +1,42 @@
+{
+  "name": "vee-css-framework",
+  "version": "1.0.0",
+  "description": "A lightweight and minimalistic CSS framework",
+  "main": "src/_vee.scss",
+  "scripts": {
+    "build-vee": "sass src/_vee.scss dist/vee.min.css --style compressed",
+    "watch-vee": "sass --watch src/_vee.scss:dist/vee.min.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vee-css/framework.git"
+  },
+  "keywords": [
+    "[\"css\"",
+    "\"framework\"",
+    "\"web\"",
+    "\"vee\"",
+    "\"responsive\"",
+    "\"utility-first\"",
+    "\"frontend\"",
+    "\"minimalistic\"",
+    "\"customizable\"",
+    "\"modern\"",
+    "\"styling\"",
+    "\"scss\"",
+    "\"sass\"",
+    "\"css-library\"",
+    "\"design\"",
+    "\"flexible\"",
+    "\"opensource\"]"
+  ],
+  "author": "TAH BI TAH DIDIER",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vee-css/framework/issues"
+  },
+  "homepage": "https://github.com/vee-css/framework#readme",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
