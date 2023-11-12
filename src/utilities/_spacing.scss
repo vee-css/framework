@@ -1,0 +1,19 @@
+// Base spacing unit
+$spacing-unit: 8px;
+
+// Spacing values
+$spacing-1x: $spacing-unit * 1;
+$spacing-2x: $spacing-unit * 2;
+$spacing-3x: $spacing-unit * 3;
+$spacing-4x: $spacing-unit * 4;
+$spacing-5x: $spacing-unit * 5;
+
+// Utilizing a mixin to quickly set margin
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  margin: $top $right $bottom $left;
+}
+
+// Utilizing a mixin to quickly set padding
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding: $top $right $bottom $left;
+}

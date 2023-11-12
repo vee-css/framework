@@ -1,9 +1,7 @@
 # Ignore node_modules directory
 node_modules/
 
-# Ignore compiled CSS files
-dist/
-*.min.css
+
 
 # Ignore compiled Sass files
 src/**/*.scssc

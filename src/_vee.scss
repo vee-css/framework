@@ -1,11 +1,13 @@
-// Import de la réinitialisation et de la typographie
+// Import reset and typography
 @import 'base/reset';
 @import 'base/typography';
 
-// Import des composants
+// Import components
 @import 'components/buttons';
 @import 'components/forms';
 
-// Import des utilitaires
+// Import utilities
 @import 'utilities/spacing';
 @import 'utilities/colors';
+
+

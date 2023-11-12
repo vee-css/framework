@@ -1,0 +1,296 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+p {
+  margin-bottom: 1em;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: #0056b3;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+.button:hover {
+  border-color: #2196f3;
+}
+.button-primary {
+  background-color: #2196f3;
+  color: #fff;
+}
+.button-primary:hover {
+  background-color: #0c7cd5;
+}
+.button-secondary {
+  background-color: #dee2e6;
+  color: #000;
+}
+.button-secondary:hover {
+  background-color: #fbfcfc;
+}
+.button-danger {
+  background-color: #f44336;
+  color: #fff;
+}
+.button-danger:hover {
+  background-color: #ea1c0d;
+}
+.button-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+.button-success:hover {
+  background-color: #3d8b40;
+}
+.button-info {
+  background-color: #2196f3;
+  color: #fff;
+}
+.button-info:hover {
+  background-color: #0c7cd5;
+}
+.button-warning {
+  background-color: #ffeb3b;
+  color: #000;
+}
+.button-warning:hover {
+  background-color: #ffe608;
+}
+.button-light {
+  background-color: #f8f9fa;
+  color: #000;
+}
+.button-light:hover {
+  background-color: #dae0e5;
+}
+.button-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+.button-dark:hover {
+  background-color: #1d2124;
+}
+input {
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 16px;
+}
+input:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+button {
+  padding: 16px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #2196f3;
+  color: #fff;
+}
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form-section {
+  margin-bottom: 32px;
+}
+.form-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.input-group {
+  margin-bottom: 24px;
+}
+textarea {
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 16px;
+}
+textarea:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+select {
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 16px;
+}
+select:focus {
+  outline: none;
+  border-color: #2196f3;
+} /*# sourceMappingURL=vee.min.css.map */

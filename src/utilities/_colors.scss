@@ -171,18 +171,5 @@ $pink-900: #880e4f;
   }
   
   
-  // Usage of the New Mixins
   
-  .my-element {
-    @include border-color($gray-500);
-    @include outline-color($blue-500);
-    @include box-shadow($black, 2px, 2px, 4px, 2px);
-    @include transition(all, 0.3s, ease-in-out);
-    @include font-color($red-500);
-    @include background-gradient($yellow-300, $yellow-500);
-    @include placeholder-color($gray-400);
-    @include focus-ring($blue-500);
-    @include opacity(0.8);
-    @include text-shadow($gray-800, 1px, 1px, 2px);
-  }
   
